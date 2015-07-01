@@ -5,7 +5,7 @@ import RequestRecord from '../records/request'
 class RequestStore extends EntityStore {
 
 	initialize() {
-		super()
+		super.initialize();
 		this.setItem({id: 2093402983});
 	}
 };

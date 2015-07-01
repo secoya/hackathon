@@ -6,6 +6,7 @@
 'use strict';
 import React from 'react-native';
 import RequestTracker from './components/request-tracker';
+//import 'babel-core/external-helpers';
 var {
   AppRegistry,
   StyleSheet,
@@ -13,7 +14,7 @@ var {
   View,
 } = React;
 
-var superagent = require('superagent');
+import superagent from 'superagent';
 
 var SecoyaMeetupApp = React.createClass({
   render: function() {
