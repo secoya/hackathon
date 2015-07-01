@@ -4,7 +4,8 @@
  * https://github.com/facebook/react-native
  */
 'use strict';
-var React = require('react-native');
+import React from 'react-native';
+import RequestTracker from './components/request-tracker';
 var {
   AppRegistry,
   StyleSheet,
@@ -18,6 +19,7 @@ var SecoyaMeetupApp = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
+        <RequestTracker requestId={2093402983} />
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>

@@ -25,10 +25,10 @@ export default new (class RequestActionCreator extends ActionCreator {
 	}
 
 	request(configFn) {
-		invariant(configFn !== null, "You must supply a config function to the request method");
+		invariant(configFn != null, "You must supply a config function to the request method");
 		request = configFn.call(superagent);
 		request.set('X-Request-With', 'xmlhttprequest');
-		invariant(request?.end?, "The return value of your config function should be an instance of superagent");
+		invariant(request != null && request.end != null, "The return value of your config function should be an instance of superagent");
 		return new Promise((resolve, reject) => {
 			request.end((err, res) => {
 				if (err != null) {

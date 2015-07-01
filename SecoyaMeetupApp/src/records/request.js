@@ -1,6 +1,6 @@
 import {Record} from 'immutable'
 
-export default Immutable.Record({
+export default Record({
 	id: null,
 	status: null,
 	ok: null,

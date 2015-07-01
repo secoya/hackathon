@@ -1,3 +1,5 @@
+/** @flow **/
+
 import RequestActionCreator from '../action-creators/request'
 import RequestStore from '../stores/requests'
 import React from 'react-native'
