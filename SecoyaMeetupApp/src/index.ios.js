@@ -4,8 +4,10 @@
  * https://github.com/facebook/react-native
  */
 'use strict';
-import React from 'react-native';
+React = require('react-native');
 import RequestTracker from './components/request-tracker';
+import GroupActionCreator from './action-creators/groups';
+import GroupStore from './stores/groups';
 //import 'babel-core/external-helpers';
 var {
   AppRegistry,
@@ -14,13 +16,15 @@ var {
   View,
 } = React;
 
-import superagent from 'superagent';
+requestId = GroupActionCreator.fetch();
+
+GroupStore.changed.add(() => {console.log(GroupStore.getItems().toJS())})
 
 var SecoyaMeetupApp = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
-        <RequestTracker requestId={2093402983} />
+        <RequestTracker requestId={requestId} />
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
