@@ -16,10 +16,10 @@
 .*/node_modules/react-tools/src/event/EventPropagators.js
 
 # Superagent and flow are not great friends
-.*/node_modules/superagent/*
+.*/node_modules/superagent/.*
 
 # Ignore the src directory, compiled code is in dist/
-.*/SecoyaMeetupApp/src/*
+.*/SecoyaMeetupApp/src/.*
 
 # Ignore commoner tests
 .*/node_modules/commoner/test/.*
