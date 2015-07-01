@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node_modules/react-native/packager/packager.sh",
-    "watch": "node_modules/babel/bin/babel/index.js -e0 -w -b flow -d dist src"
+    "watch": "node_modules/babel/bin/babel/index.js -e0 -w --optional runtime -b flow -d dist src"
   },
   "dependencies": {
     "babel": "^5.6.14",
